@@ -8,8 +8,10 @@ export default function ValueCurves() {
     const {props, offsets} = context;
 
     return <>
+        {/* eslint-disable-next-line */}
         {props.valuesList.map((_, lineIndex) => {
             const polyLine = getPolylinePoints(lineIndex, context);
+            {/* eslint-disable-next-line */}
             const {stroke, area} = props.labels[lineIndex];
 
             const beginPoint = pointToString({x: offsets.left, y: offsets.innerHeight + offsets.top});
