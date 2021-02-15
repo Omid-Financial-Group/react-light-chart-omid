@@ -43,7 +43,7 @@ function renderValuesNumbers() {
     const shownValues: number[] = [];
     for (let lineIndex = 0; lineIndex <= horizontalShownValuesCount; lineIndex++) {
         const stopValue = minAndMaxY.max - lineIndex * (minAndMaxY.max - minAndMaxY.min) / horizontalShownValuesCount;
-        shownValues.push(stopValue);
+        shownValues.push(parseFloat(stopValue.toFixed(2)));
     }
 
     return createHorizontalLine(shownValues, lineYDistance);
